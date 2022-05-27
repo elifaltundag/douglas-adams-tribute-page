@@ -348,7 +348,7 @@ figcaption {
     display: flex;
     flex-grow: 5;
     justify-content: center;
-    gap: 1em;
+    gap: clamp(9vw, 8vw + 0.1rem, 20vw);
 }
 
 .nav-link,
