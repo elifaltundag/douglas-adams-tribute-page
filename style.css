@@ -10,12 +10,12 @@
 
     /* Colors */
     --clr-dark: 0, 3%, 7%;
-    --clr-accent: 45, 40%, 65%;
-    --clr-accent: 220, 70%, 55%;
+    --clr-accent: 200, 70%, 55%;
     --clr-light: 0, 0%, 97%; 
 
     --opac: 0.8;
 
+    /* Gap */ 
     --gap: 0.8em;
 
     /* Reference outline */
@@ -225,7 +225,6 @@ figcaption {
     transition: transform 300ms ease-in-out;
 
     min-height: 100%;
-    /* outline: var(--ref-outline); */
 }
 
 .btn:focus {
