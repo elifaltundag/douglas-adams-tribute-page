@@ -48,7 +48,7 @@ body {
     overflow-x: hidden;  
     line-height: 1.6;
     min-height: 100vh;
-
+    background-color: hsl(var(--clr-dark));
     color: rgba(255, 0, 0, 0.75);
 }
 
