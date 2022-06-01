@@ -1,7 +1,7 @@
 # Douglas Adams Tribute Page
 
 ## About the Project
-In this project, I've built a tribute page to Douglas Adams, one of my favorite writers, as of so many others. This is one of the Responsive Web Design Certification projects, you can access the details [here](https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-tribute-page-project/build-a-tribute-page).
+In this project, I've built a tribute page to Douglas Adams, one of my favorite writers, as of so many others. This is one of the Responsive Web Design Certification projects, you can access the details [here](https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-tribute-page-project/build-a-tribute-page){:target="_blank"}.
 
 ### Project status: on&ndash;going
 
