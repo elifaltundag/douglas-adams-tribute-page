@@ -92,7 +92,6 @@ select {
 .flex {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: flex-start;
     flex-wrap: wrap;
     gap: var(--gap, 1rem);
@@ -362,7 +361,6 @@ figcaption {
     /* display: flex;
     align-items: center;
     justify-content: center; */
-    padding-top: 1em;
 }
 
 .nav-list {
@@ -459,7 +457,6 @@ figcaption {
         position: fixed;
         height: 100vh;
         bottom: 0;
-        left: 0;
         right: 0;
         background-color: transparent;
 
@@ -483,6 +480,8 @@ figcaption {
     #nav-bar {
         width: 80%;
         display: flex;
+        padding-top: 5vh;
+        padding-left: 5vw;
     }
 
     #nav-bar[displayed="on"] {
