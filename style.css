@@ -104,7 +104,7 @@ select {
     z-index: 0;
     background-image: url("https://images.unsplash.com/photo-1518066000714-58c45f1a2c0a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: bottom;
     background-size: cover;
     filter: saturate(80%) brightness(15%);
     transform: rotateX(180deg);
@@ -224,7 +224,7 @@ figcaption {
     
     transition: transform 300ms ease-in-out;
 
-    min-height: 100%;
+    /* min-height: 100%; */
 }
 
 .btn:focus {
@@ -238,6 +238,7 @@ figcaption {
     font-size: clamp(1.2rem, 0.1rem + 1.8vw, 2rem);
     background-color: hsl(var(--clr-accent));
     color: hsl(var(--clr-dark));
+    position: relative;
 }
 
 .btn-large {
@@ -249,6 +250,8 @@ figcaption {
 .btn-small::after,
 .btn-large::after {
     position: absolute;
+    left: 0;
+    top: 0;
     z-index: -1;
     content: "";
     width: 100%;
@@ -334,18 +337,37 @@ figcaption {
     top: 1.5em;
 }
 
+
 /* -------------------- */
 /* SECTIONAL ELEMENTS   */
 /* -------------------- */
+/* Nav Bar */ 
+@supports (backdrop-filter: blur(10px)) {
+    #nav-bar {
+        background-color: hsla(var(--clr-dark), 0.2);
+        backdrop-filter: blur(20px);
+    }
+}
 
-/* Nav Bar */  
+@supports not (backdrop-filter: blur(10px)) {
+    #nav-bar {
+        background-color: hsla(var(--clr-dark), 0.98);
+    }
+}
+
 #nav-bar {
-    display: block;
+    position: fixed;
+    z-index: 500;
+    /* inset: 0; */
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
     padding-top: 1em;
 }
 
 .nav-list {
     display: flex;
+    flex-direction: column;
     flex-grow: 5;
     justify-content: center;
     gap: clamp(9vw, 8vw + 0.1rem, 20vw);
@@ -428,10 +450,65 @@ figcaption {
 /* MEDIA QUERIES        */
 /* -------------------- */
 
+@media screen and (max-width: 600px) {
+    /* -------------------- */
+    /* MOBILE NAV TOGGLE    */
+    /* -------------------- */
+    #mobile-nav-toggle {
+        z-index: 1000;
+        position: fixed;
+        height: 100vh;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: transparent;
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding: 1em 1.4em;
+        
+    }
+
+    #btn-42-laptop {
+        display: none;
+    }
+
+    #btn-42-mobile {
+        display: block;
+        border: none;
+        outline: none;
+    }
+
+    #nav-bar {
+        width: 80%;
+        display: flex;
+    }
+
+    #nav-bar[displayed="on"] {
+        display: block;
+        top: 0;
+        left: 0;
+        bottom: 0;
+    }
+    
+    #nav-bar[displayed="off"] {
+        display: none;
+    }
+}
+
 /* Mobile first design */ 
 @media screen and (min-width: 600px) {
     :root {
         --gap: 0.1em; 
+    }
+
+    #btn-42-mobile {
+        display: none;
+    }
+
+    #btn-42-laptop {
+        display: initial;
     }
     
     h1 {
@@ -444,13 +521,27 @@ figcaption {
         align-items: center;
     }
 
+    #mobile-nav-toggle {
+        display: none;
+    }
+
     #nav-bar {
-        padding: 1.5em 0;       
+        padding: 1.5em 0;  
+        top: 0;     
+        left: 0;
+        bottom: unset;
+        right: 0;
     }
 
     .nav-list {
+        display: flex;
+        flex-direction: row;
+        flex-grow: 5;
+        justify-content: center;
+        gap: clamp(9vw, 8vw + 0.1rem, 20vw);
         gap: 4em;
         justify-content: flex-end;
+
     }
 
     .mobile-nav-container {
@@ -460,11 +551,12 @@ figcaption {
     .hero {
         flex-direction: row;
         align-items: flex-start;
-        margin-top: 5em;
+        margin-top: 15em;
         gap: 5em;
     }
 
 }
+
 
 
 @media (hover) {

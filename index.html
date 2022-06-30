@@ -14,13 +14,23 @@
      
     <!-- CSS --> 
     <link href="style.css" rel="stylesheet" type="text/css">
+
+    <!-- JS -->
+    <script src="main.js" defer></script>
 </head>
 <body id="main">
     <div class="background"></div>
-    <header>            
-        <nav id="nav-bar">
+    <header>       
+        <div id="mobile-nav-toggle">
+            <button class="btn btn-small" id="btn-42-mobile" aria-controls="nav-bar">
+                <span class="sr-only">Menu</span>
+                42
+            </button>
+        </div>  
+
+        <nav id="nav-bar" displayed="on">
             <div id="primary-nav" class="content flex"> 
-                <div class="btn btn-small"><a class="btn-link"href="#">42</a></div>
+                <div class="btn btn-small" id="btn-42-laptop"><a class="btn-link"href="#">42</a></div>
                 <ul class="nav-list">
                     <ul><a class="nav-link" href="#personality">Personality</a>
                         <li><a class="nav-link-sub" href="#technology">Technology</a></li>
@@ -59,7 +69,7 @@
             <section id="personality" aria-label="personality">
                 <div class="intro">
                     <h2>Personality</h2>
-                    <p>Considering he was friends with Pink Floyd, Douglas Adams was pretty cool. But what was it about him so uniquely cool? As a developer, I can build an entire page describing Adams&apos; personality based on the things I read online. But I assume you&apos;ve already got an idea on the way his mind works based on his life and work. So finally, let&apos;s see his legacy other than sci-fi, and let our minds interpret Adams' personality for us. After all, isn't life what we experience rather than facts?</p> 
+                    <p>Considering he was friends with Pink Floyd, Douglas Adams was pretty cool. But what was it about him so uniquely cool? As a developer, I can build an entire page describing Adams&apos; personality based on the things I read online. But before we dive into life and work of this brilliant author, I want to briefly present how he has seen the world. So, let&apos;s see his legacy other than artistic creation, and let our minds interpret Adams' personality for us. After all, isn't life what we experience rather than facts?</p> 
                 </div>
                 
                 <div class="details">
