@@ -484,6 +484,10 @@ figcaption {
         padding-left: 5vw;
     }
 
+    #nav-bar[displayed="initial"] {
+        display: none;
+    }
+    
     #nav-bar[displayed="on"] {
         display: block;
         top: 0;
