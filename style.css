@@ -489,10 +489,18 @@ figcaption {
         top: 0;
         left: 0;
         bottom: 0;
+
+        transition: transform 300ms ease-out;
     }
     
     #nav-bar[displayed="off"] {
-        display: none;
+        display: block;
+        top: 0;
+        left: 0;
+        bottom: 0;
+
+        transform: translateX(-100%);
+        transition: transform 300ms ease-out;
     }
 }
 
