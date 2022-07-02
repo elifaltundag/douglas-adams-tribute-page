@@ -13,7 +13,7 @@ btnNavToggle.addEventListener("click", () => {
 
     if (navBarDisplayed === "on") {
         navBar.setAttribute("displayed", "off");
-    } else if (navBarDisplayed === "off" || navBarDisplayed === "initial") {
+    } else if (navBarDisplayed === "off") {
         navBar.setAttribute("displayed", "on");
     }
     
