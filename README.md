@@ -6,8 +6,8 @@ In this project, I've built a tribute page to Douglas Adams, one of my favorite 
 ### Project status: on&ndash;going
 
 ## Objectives
-* Build a responsive web page with pure and only HTML & CSS
-* Add JavaScript as further improvements
+* Build a responsive website with HTML, CSS & JS
+* Research on Douglas Adams
 
 ## Technologies
 * HTML5
@@ -16,5 +16,7 @@ In this project, I've built a tribute page to Douglas Adams, one of my favorite 
 * Git Bash
 
 ## Further Improvements
+* Minimize navbar on laptop and desktop, expand when hovered on
 * Summarize each section with a paragrah
-* Add buttons to animate details display -> JavaScript 
+* Add buttons to animate details display 
+ 
