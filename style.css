@@ -525,7 +525,25 @@ figcaption {
     .flex {
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
+    }
+
+    .nav-list {
+        align-self: flex-start;
+    }
+
+    .nav-link {
+        min-width: 6ch;
+        max-width: 13ch;
+    }
+
+    #nav-bar[nav-expanded="off"] .nav-link-sub {
+        display: none;
+    }
+
+    #nav-bar[nav-expanded="on"] .nav-link-sub {
+        transform-origin: top;
+        transform: scaleY(100%);
     }
 
     #mobile-nav-toggle {
@@ -547,7 +565,7 @@ figcaption {
         justify-content: center;
         gap: clamp(9vw, 8vw + 0.1rem, 20vw);
         gap: 4em;
-        justify-content: flex-end;
+        justify-content: flex-start;
 
     }
 

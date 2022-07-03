@@ -20,7 +20,7 @@
 </head>
 <body id="main">
     <div class="background"></div>
-    <header>       
+    <header id="header">       
         <div id="mobile-nav-toggle">
             <button class="btn btn-small" id="btn-42-mobile" aria-controls="nav-bar">
                 <span class="sr-only">Menu</span>
@@ -28,9 +28,8 @@
             </button>
         </div>  
 
-        <nav id="nav-bar" displayed="off">
+        <nav id="nav-bar" displayed="off"  nav-expanded="off">
             <div id="primary-nav" class="content flex"> 
-                <div class="btn btn-small" id="btn-42-laptop"><a class="btn-link"href="#">42</a></div>
                 <ul class="nav-list">
                     <ul><a class="nav-link" href="#personality">Personality</a>
                         <li><a class="nav-link-sub" href="#technology">Technology</a></li>
@@ -48,6 +47,7 @@
                         <li><a class="nav-link-sub" href="#death">Death</a></li>
                     </ul>
                 </ul>
+                <div class="btn btn-small" id="btn-42-laptop"><a class="btn-link"href="#">42</a></div>
             </div>
         </nav>
     </header>
