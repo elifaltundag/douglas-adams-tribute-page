@@ -389,14 +389,13 @@ figcaption {
 }
 
 .nav-link {
-    font-size: clamp(1rem, 0.5rem + 1.5vw, 2rem);
+    font-size: clamp(1.3rem, 0.5rem + 1.5vw, 1.8rem);
     font-weight: 700;
     text-transform: uppercase;
 }
 
 .nav-link-sub {
-    font-size: clamp(0.9rem, 0.2rem + 1vw, 1.8rem);
-    
+    font-size: clamp(1.1rem, 0.5rem + 1vw, 1.5rem);
 }
 
 
